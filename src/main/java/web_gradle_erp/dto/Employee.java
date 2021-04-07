@@ -14,6 +14,14 @@ public class Employee {
 	public Employee() {
 	}
 
+	public Date getHiredate() {
+		return hiredate;
+	}
+
+	public void setHiredate(Date hiredate) {
+		this.hiredate = hiredate;
+	}
+
 	public Employee(int empNo, Employee manager) {
 		this.empNo = empNo;
 		this.manager = manager;

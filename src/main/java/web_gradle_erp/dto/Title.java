@@ -7,6 +7,7 @@ public class Title {
 	public Title() {
 	}
 
+
 	public Title(int titleNo, String titleName) {
 		super();
 		this.titleNo = titleNo;
