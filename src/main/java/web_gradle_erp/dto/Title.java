@@ -4,8 +4,7 @@ public class Title {
 	private int titleNo;
 	private String titleName;
 
-	public Title() {
-	}
+	public Title(Title title) {}
 
 
 	public Title(int titleNo, String titleName) {
@@ -37,7 +36,7 @@ public class Title {
 
 	@Override
 	public String toString() {
-		return String.format("Title [titleNo=%s, titleName=%s]", titleNo, titleName);
+		return String.format("%s %s", titleNo, titleName);
 	}
 
 	

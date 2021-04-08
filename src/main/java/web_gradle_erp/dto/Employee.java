@@ -1,5 +1,6 @@
 package web_gradle_erp.dto;
 
+import java.text.SimpleDateFormat;
 import java.util.Date;
 
 public class Employee {
@@ -10,7 +11,9 @@ public class Employee {
 	private int salary;
 	private Department dept;
 	private Date hiredate;
-
+	
+	private SimpleDateFormat df = new SimpleDateFormat("YYYY-MM-dd");
+	
 	public Employee() {
 	}
 
@@ -93,9 +96,12 @@ public class Employee {
 
 	@Override
 	public String toString() {
-		return String.format("Employee [empNo=%s, empName=%s, title=%s, manager=%s, salary=%s, dept=%s, hiredate=%s]",
-				empNo, empName, title, manager, salary, dept, hiredate);
+		return String.format(
+				"Employee [empNo=%s, empName=%s, title=%s, manager=%s, salary=%s, dept=%s, hiredate=%s, df=%s]", empNo,
+				empName, title, manager == null ? "" : manager, salary, dept, hiredate, df);
 	}
+
+
 
 
 }
